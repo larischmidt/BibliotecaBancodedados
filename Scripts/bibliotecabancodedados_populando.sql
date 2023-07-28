@@ -1,3 +1,4 @@
+------------------------------------------ Populando tabela com as informações de cada endereços ------------------
 INSERT INTO biblioteca.endereco (rua, numero, complemento, bairro,cidade,estado,pais,cep)
 	VALUES 
     ('R.César Carelli', '1065','Casa','Iguaçu','Fazenda Rio Grande','PR','Brasil','83833477'),
@@ -11,7 +12,7 @@ INSERT INTO biblioteca.endereco (rua, numero, complemento, bairro,cidade,estado,
     ('R.Smith de Vasconcelos','30','Casa','Cosme Velho','Rio De Janeiro','RJ','Brasil','22241160'),
     ('Pç.Castro Alves','S/N','Praça','Centro','Salvador','BA','Brasil','40301110');
     
-
+------------------------------------ Populando tabela com as informações de cada pessoa ---------------------------
 INSERT INTO biblioteca.pessoa ( nome, cpf, data_de_nascimento,email,nacionalidade,id_endereco)
 	VALUES
     ('Larissa Schmidt','11174553456','1999-04-23','larissaschmidt34@gmail.com','Brasileira',4),
@@ -25,7 +26,7 @@ INSERT INTO biblioteca.pessoa ( nome, cpf, data_de_nascimento,email,nacionalidad
     ('Alexandre Dumas','11175656745','1802-07-24','umportodos@todosporum.com','Francesa',6),
     ('Cecilha Meireles','11208756734','1901-11-07','ouisto@ouaquilo.com','Brasileira',9);
     
-    
+-------------------------------- Populando tabela com as informações de cada funcionario --------------------------    
 INSERT INTO biblioteca.funcionario (cargo, numero_de_registro, ano_de_admissao , senha_de_acesso, id_pessoa)
    VALUES
    ('Bibliotecario','6773','2023-07-25 10:10:10','12345678',5),
@@ -33,7 +34,7 @@ INSERT INTO biblioteca.funcionario (cargo, numero_de_registro, ano_de_admissao ,
    ('Seguranca','2345','2000-05-14 12:10:13','23142567',1),
    ('Auxiliar de servicos gerais','3456','2023-04-16 15:10:34','56341234',2),
    ('Operadora de caixa','5634','2022-06-18 16:10:10','34263723',4);
-   
+-------------------------------- Populando tabela com as informações de cada autor --------------------------   
 INSERT INTO biblioteca.autor (quantidade_de_publicados, especializacao, id_pessoa)
 	VALUES
 	('50','Poesia',10),
@@ -41,7 +42,7 @@ INSERT INTO biblioteca.autor (quantidade_de_publicados, especializacao, id_pesso
     ('1200','Romance',9),
     ('820','Realismo',7),
     ('5','Poesia',6);
-    
+---------------------------- Populando tabela com as informações de cada editora ----------------------    
 INSERT INTO biblioteca.editora (nome, telefone, cnpj)
 		VALUES
         ('Companhia das Letras', '4136042644','12345678912345'),
@@ -49,7 +50,7 @@ INSERT INTO biblioteca.editora (nome, telefone, cnpj)
         ('Suma','4136045634','34567856435698'),
         ('Editora Intrinseca','4136275678','56763456782576'),
         ('Globo','2121212121','04067191000160');
-        
+----------------------------Populando tabela com as informações de cada livro --------------------------        
 INSERT INTO	biblioteca.livro (titulo, genero,quantidade_de_paginas,idioma,ano_de_publicacao,id_autor,id_editora)  
 		VALUES
         ('Espuma Flutuantes','Poesia','169','Português','1997',5,5),
