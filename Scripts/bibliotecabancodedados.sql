@@ -1,11 +1,11 @@
 
 # criação do banco de bados biblioteca
 # https://dbdiagram.io/d/64c2c13f02bd1c4a5ed1a653
-
+------------------------------------------------------Usando o comando para criação do banco de dados -----
 CREATE DATABASE IF NOT EXISTS biblioteca; 
 USE biblioteca;
 
-
+------------------------Criação da tabela endereço nela ira contar todos os dados de endereço que sera ultilizado---
 CREATE TABLE IF NOT EXISTS `endereco` (
   `id_endereco` int UNIQUE PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `rua` varchar(264),
@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS `endereco` (
   `cep` varchar(8)
 );
 
-
+-----------------------Criação da tabela pessoa nela ira conter todos os dados de todas as pessoas da biblioteca-----
 CREATE TABLE IF NOT EXISTS `pessoa` (
   `id_pessoa` int UNIQUE PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `nome` varchar(264),
@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `pessoa` (
   `id_endereco` int,
   FOREIGN KEY (id_endereco) REFERENCES endereco (id_endereco) ON UPDATE CASCADE ON DELETE CASCADE
 );
-
+---------------------- Criação da tabela funcionario nela se encontra os dados cadastrais dos funcionarios dentro da empresa---
 CREATE TABLE IF NOT EXISTS `funcionario` (
   `id_funcionario` int UNIQUE PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `cargo` varchar(50),
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `funcionario` (
   `id_pessoa` int,
   FOREIGN KEY (id_pessoa) REFERENCES pessoa (id_pessoa) ON UPDATE CASCADE ON DELETE CASCADE
 );
-
+-----------------------Criação da tabela autor nela consta informações sobre o autor e suas obras---
 CREATE TABLE IF NOT EXISTS `autor` (
   `id_autor` int UNIQUE PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `quantidade_de_publicados` varchar(10),
@@ -47,14 +47,14 @@ CREATE TABLE IF NOT EXISTS `autor` (
   `id_pessoa` int,
  FOREIGN KEY (id_pessoa) REFERENCES pessoa (id_pessoa) ON UPDATE CASCADE ON DELETE CASCADE
 );
-
+---------------------Criação da tabela editora nela consta as infromações das editoras que forcem as edições para biblioteca ----
 CREATE TABLE IF NOT EXISTS `editora` (
   `id_editora` int UNIQUE PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `nome` varchar(264),
   `telefone` varchar(11),
   `cnpj` varchar(14)
  );
-
+--------------------------Criação da tabela livro nela se encontra todas as informações das obras disponivéis na biblioteca-----
 CREATE TABLE IF NOT EXISTS `livro` (
   `id_livro` int UNIQUE PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `titulo` varchar(255),
