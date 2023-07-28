@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS `editora` (
   `id_editora` int UNIQUE PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `nome` varchar(264),
   `telefone` varchar(11),
-  `cnpj` varchar(14),
+  `cnpj` varchar(14)
  );
 
 CREATE TABLE IF NOT EXISTS `livro` (
