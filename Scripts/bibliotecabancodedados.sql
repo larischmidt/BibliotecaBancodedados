@@ -1,5 +1,6 @@
 
 # criação do banco de bados biblioteca
+# https://dbdiagram.io/d/64c2c13f02bd1c4a5ed1a653
 
 CREATE DATABASE IF NOT EXISTS biblioteca; 
 USE biblioteca;
