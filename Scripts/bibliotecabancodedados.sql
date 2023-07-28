@@ -53,9 +53,7 @@ CREATE TABLE IF NOT EXISTS `editora` (
   `nome` varchar(264),
   `telefone` varchar(11),
   `cnpj` varchar(14),
-  `id_endereco` int,
-  FOREIGN KEY (id_endereco) REFERENCES endereco (id_endereco) ON UPDATE CASCADE ON DELETE CASCADE
-);
+ );
 
 CREATE TABLE IF NOT EXISTS `livro` (
   `id_livro` int UNIQUE PRIMARY KEY NOT NULL AUTO_INCREMENT,
